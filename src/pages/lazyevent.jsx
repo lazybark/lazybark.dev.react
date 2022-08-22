@@ -41,7 +41,6 @@ export function Lazyevent(){
                                             <li><strong>Download latest</strong>:</li>
                                     </ul>
                                     <div className="d-grid gap-2">
-
                                         <a className="btn btn-primary" href="">ZIP <i
                                             className="fa-solid fa-box-archive"></i></a>
                                         <a className="btn btn-primary" href="">TAR.GZ <i
