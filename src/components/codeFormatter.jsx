@@ -8,7 +8,7 @@ export function GolangCodeStringFormatted(props){
     return ret[0]
 }
 
-export function Code(props){
+export function CodeTag(props){
     return <code>{props.text}</code>
 }
 
