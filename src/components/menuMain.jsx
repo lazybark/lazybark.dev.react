@@ -31,10 +31,13 @@ export function MenuMain(){
                                 <a className="nav-link color-white" href="/#work">WORKS</a>
                             </li>
                             <li className="nav-item">
+                                <a className="nav-link color-white" href="/lazyevent/">LAZYEVENT</a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link color-white" href="/lazycloud-sync-app/">LAZYCLOUD</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link color-white" href="/sync-apps-protocol">SYNC PROTOCOL</a>
+                                <a className="nav-link color-white" href="/go-helpers">GO HELPERS</a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle color-white" href="#" role="button"
@@ -42,10 +45,9 @@ export function MenuMain(){
                                     OTHER PROJECTS
                                 </a>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/lazyevent/">LazyEvent logger</a></li>
+                                    <li><a className="dropdown-item" href="/sync-apps-protocol">Sync protocol</a></li>
                                     <li><a className="dropdown-item" href="/go-jwt">Go JWT-auth</a></li>
-                                    <li><a className="dropdown-item" href="/go-helpers">Go helpers</a></li>
-                                    <li><a className="dropdown-item" href="/go-tls-client-server">Go tls client & server</a></li>
+                                    <li><a className="dropdown-item" href="/go-tls-client-server">Go tls client & server lib</a></li>
                                     <li><a className="dropdown-item" href="/go-cert-generator">PEM cert generator</a></li>
                                 </ul>
                             </li>
