@@ -1,0 +1,14 @@
+Event ID;Time;Level;Source;Text;
+d7c304c2-9956-4518-ab9c-d0d6cf6fc065;Fri Oct 14 22:29:52 MSK 2022;INFO;;Some info;
+ea961b04-4805-4f4f-8cfd-73114b371767;Fri Oct 14 22:29:52 MSK 2022;WARNING;;Some warning;
+d0356627-076f-4ffb-9645-3c70974b57e9;Fri Oct 14 22:29:52 MSK 2022;ERROR;;Some error;
+d8d263dd-a34b-4024-be57-038de9be2f2f;Fri Oct 14 22:29:54 MSK 2022;INFO;;Some info2;
+9259e387-6280-4627-b17e-fc070f341779;Fri Oct 14 22:29:54 MSK 2022;ERROR;[DEBUG];Some error;
+480eac75-2972-4b1d-8fd8-4d6ca9a2f9eb;Fri Oct 14 22:29:54 MSK 2022;ERROR;[MAIN];Some error;
+75b8bef4-0137-45d9-a5ed-6b62cfa0be25;Fri Oct 14 22:29:54 MSK 2022;ERROR;<WEIRD SOURCE>;That one has come from weird place;
+9df4be05-d4af-44d1-8784-74c475085764;Fri Oct 14 22:29:54 MSK 2022;ERROR;;Some error occured;
+3cb851b8-bff9-43a4-9eda-b5f2a072a17c;Fri Oct 14 22:29:54 MSK 2022;ERROR;;And the same moment something else happened!;
+2daffe33-873e-45a8-858b-1deffbb360e3;Fri Oct 14 22:29:56 MSK 2022;INFO;;Red info message;
+2c8f1620-c586-4d8a-aee4-dfb88f0450ea;Fri Oct 14 22:29:56 MSK 2022;ERROR;;well, that's an error;
+9436ec5e-8205-4aa3-a55f-254f49d6b125;Fri Oct 14 22:29:56 MSK 2022;ERROR;;error event occured!;
+b3a5324a-353e-4be9-86d1-2fc45d3062e9;Fri Oct 14 22:29:56 MSK 2022;NOTE;[MAIN];Event from default template;

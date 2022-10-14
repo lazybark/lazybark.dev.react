@@ -78,14 +78,16 @@ export function Lazyevent() {
                                         <li><strong>Repository</strong>: <a className="anc-link"
                                                                             href="https://github.com/lazybark/lazyevent">GitHub <i
                                             className="bi bi-github"></i></a></li>
-                                        <li><strong>Current version</strong>: v2.0.0</li>
+                                        <li><strong>Current version</strong>: v3.0.0</li>
                                         <hr/>
                                         <li><strong>Download latest</strong>:</li>
                                     </ul>
                                     <div className="d-grid gap-2">
-                                        <a className="btn btn-primary" href="https://github.com/lazybark/lazyevent/archive/refs/tags/v2.0.0.zip">ZIP <i
+                                        <a className="btn btn-primary"
+                                           href="https://github.com/lazybark/lazyevent/archive/refs/tags/v3.0.0.zip">ZIP <i
                                             className="fa-solid fa-box-archive"></i></a>
-                                        <a className="btn btn-primary" href="https://github.com/lazybark/lazyevent/archive/refs/tags/v2.0.0.tar.gz">TAR.GZ <i
+                                        <a className="btn btn-primary"
+                                           href="https://github.com/lazybark/lazyevent/archive/refs/tags/v3.0.0.tar.gz">TAR.GZ <i
                                             className="fa-solid fa-file-zipper"></i></a>
                                     </div>
                                 </div>
@@ -123,19 +125,23 @@ export function Lazyevent() {
                             />
                             <p className="text-justify">
                                 <strong>ID</strong>: unique identifier of event. Log processor will generate ID (using
-                                Google's UUID) only if ID was empty at the moment Log() was called. If you wish to use an event
+                                Google's UUID) only if ID was empty at the moment Log() was called. If you wish to use
+                                an event
                                 as a template, then ID should stay empty. But if you need to use own IDs, then FlushID()
                                 can be called to clean it, or SetID() to set new one. ID = "..." is a good, but not very
                                 readable option (i think).
                             </p>
                             <p className="text-justify">
-                                <strong>Level</strong>: one of predefined levels that determines how critical the event is.
-                                Higher is worse. Levels are: INFO, NOTE, WARN, ERR, CRIT, PANIC, FATAL. Events with PANIC
+                                <strong>Level</strong>: one of predefined levels that determines how critical the event
+                                is.
+                                Higher is worse. Levels are: INFO, NOTE, WARN, ERR, CRIT, PANIC, FATAL. Events with
+                                PANIC
                                 and FATAL will cause Log processor to call panic() or exit() after logging.
                             </p>
                             <p className="text-justify">
                                 <strong>Type</strong>: type of logger that should be used to log event. Type helps split
-                                logs by meaning, so main log will not be populated with debug or verbose info. Predefined
+                                logs by meaning, so main log will not be populated with debug or verbose info.
+                                Predefined
                                 types are Any, Main, ErrorFlow, Verbose and Debug. But you can create own types and
                                 pass to default or custom loggers.
                             </p>
@@ -148,9 +154,12 @@ export function Lazyevent() {
                                 for CLI app.
                             </p>
                             <p className="text-justify">
-                                <strong>Time</strong>: time of event creation, which will be replaced with logging time in
-                                case TimeFixed in NOT true. Loggers use a copy of event, so Time of original event always
-                                stays the same. It's useful to make records about several events that occurred at the same
+                                <strong>Time</strong>: time of event creation, which will be replaced with logging time
+                                in
+                                case TimeFixed in NOT true. Loggers use a copy of event, so Time of original event
+                                always
+                                stays the same. It's useful to make records about several events that occurred at the
+                                same
                                 second, but have different text/level/type.
                             </p>
                             <p className="text-justify">
@@ -169,19 +178,23 @@ export function Lazyevent() {
                             </p>
                             <h3 id="create_update">Create & update event</h3>
                             <p className="text-justify">
-                                There are two convenient ways to create an event: directly from <code>events</code> package
+                                There are two convenient ways to create an event: directly
+                                from <code>events</code> package
                                 and from an object called <code>EvDefault</code>.
                             </p>
                             <p className="text-justify">
                                 The first case is suitable when we
                                 have only few events in a function or when all events are more or less standard. Because
-                                events created this way would have only default field values, except Level and Text. It can be done
+                                events created this way would have only default field values, except Level and Text. It
+                                can be done
                                 by calling <code>events.LEVEL_NAME(<GoString text={`"event text"`}/>)</code> (possible
-                                levels: Info, Note, Warning, Error, Critical, Panic, Fatal). <code>Empty()</code> will create an event with INFO level, but empty text.
+                                levels: Info, Note, Warning, Error, Critical, Panic, Fatal). <code>Empty()</code> will
+                                create an event with INFO level, but empty text.
                             </p>
                             <p className="text-justify">
                                 Second case is more convenient when we need to deploy many similar events across the app
-                                or function. We can create object of <code>events.EvDefault</code> as a template and then
+                                or function. We can create object of <code>events.EvDefault</code> as a template and
+                                then
                                 generate events with methods described above. All events will have Source, Type, Format
                                 and TimeFixed parameters similar to instance of EvDefault.
                             </p>
@@ -205,7 +218,8 @@ export function Lazyevent() {
                                 Event updating is a simple process that can happen via manual value setting or
                                 default methods: default types and formats can be set by calling methods like
                                 e.Verbose() or e.Red(), same goes for levels described above. To set source,
-                                you would need to call e.Src(). Text can be changed via e.SetText() and fixing/unfixing time
+                                you would need to call e.Src(). Text can be changed via e.SetText() and fixing/unfixing
+                                time
                                 is possible via e.FixTime()/UnFixTime()
                             </p>
                             <h3 id="log">Log event</h3>
@@ -213,11 +227,15 @@ export function Lazyevent() {
                                 Event can be logged by calling Log() on lproc.LogProcessor.
                             </p>
                             <p className="text-justify">
-                                Processor is created by calling lproc.New(timeFormat string, errChan chan (error), reportErrors bool, la ...logger.ILogger).
-                                timeFormat here represents template to format event time in log records. For default loggers
+                                Processor is created by calling lproc.New(timeFormat string, errChan chan (error),
+                                reportErrors bool, la ...logger.ILogger).
+                                timeFormat here represents template to format event time in log records. For default
+                                loggers
                                 it should be one of formats we use with time.Time.Format(), but custom
-                                loggers may use any other format. If your logger uses something special in that case, you
-                                may want to have only you custom loggers in LogProcessor to avoid problems with default ones.
+                                loggers may use any other format. If your logger uses something special in that case,
+                                you
+                                may want to have only you custom loggers in LogProcessor to avoid problems with default
+                                ones.
                                 errChan will be used to send errors from loggers in case reportErrors = true.
                             </p>
                             <p className="text-justify">
@@ -228,7 +246,7 @@ export function Lazyevent() {
                             </p>
                             <p className="text-justify">
                                 Code examples can be found below or in main.go on <a className="anc-link"
-                                                                            href="https://github.com/lazybark/lazyevent">GitHub <i
+                                                                                     href="https://github.com/lazybark/lazyevent">GitHub <i
                                 className="bi bi-github"></i></a>.
                             </p>
                             <p className="text-justify">
@@ -246,8 +264,10 @@ export function Lazyevent() {
                                 <p><strong>NOTE</strong></p>
                                 <p className="text-justify">
                                     LogErrOnly simply sets types to events. It does not change standard log
-                                    sequence. So, if you have a logger that uses events.Any logtype, it will get and log the
-                                    event even if you sent specific logtype to LogErrOnly. That's why doubles may appear in
+                                    sequence. So, if you have a logger that uses events.Any logtype, it will get and log
+                                    the
+                                    event even if you sent specific logtype to LogErrOnly. That's why doubles may appear
+                                    in
                                     case there are several loggers with crossing types.
                                 </p>
                                 <p className="text-justify">
@@ -257,11 +277,19 @@ export function Lazyevent() {
                                 </p>
                             </div>
                             <div className="alert alert-danger" role="alert">
-                                <p><strong>NOTE</strong></p>
+                                <p><strong>NOTE 2</strong></p>
                                 <p className="text-justify">
                                     When creating your own logger, keep in mind that logger may not check
                                     event type. LogProcessor does that, so double-checking will just take
                                     some extra resources.
+                                </p>
+                            </div>
+                            <div className="alert alert-success" role="alert">
+                                <p><strong>NOTE 3</strong></p>
+                                <p className="text-justify">
+                                    Default CLI & plaintext file loggers have <code>pureText</code> directive to
+                                    print out pure log event text (without time, id, level, etc. - but with color
+                                    formatting in case CLI).
                                 </p>
                             </div>
                             <div className="accordion accordion-flush" id="accordionFlushExample">
@@ -274,7 +302,7 @@ export function Lazyevent() {
                                                 Full LazyEvent examples code:
                                             </button>
                                             <a className="btn btn-primary"
-                                               href="/files/go-source-code/lazyevent/lazyevent-2.0.0.zip">Download <i
+                                               href="/files/go-source-code/lazyevent/lazyevent-3.0.0.zip">Download <i
                                                 className="fa-solid fa-box-archive"></i></a>
                                         </div>
                                     </div>
@@ -297,11 +325,11 @@ export function Lazyevent() {
                                                     "func main() {\n" +
                                                     "\t//Create  loggers (non-default loggers would just need to implement logger.ILogger interface)\n" +
                                                     "\t//CLI logger for all events\n" +
-                                                    "\tcli := logger.NewCLI(events.Any)\n" +
+                                                    "\tcli := logger.NewCLI(false, events.Any)\n" +
                                                     "\t//CLI for errors only\n" +
-                                                    "\tcli2 := logger.NewCLI(events.ErrorFlow)\n" +
+                                                    "\tcli2 := logger.NewCLI(false, events.ErrorFlow)\n" +
                                                     "\t//Text loggers for all event types\n" +
-                                                    "\tptl, err := logger.NewPlaintext(\"some.log\", false, events.Any)\n" +
+                                                    "\tptl, err := logger.NewPlaintext(\"some.log\", false, false, events.Any)\n" +
                                                     "\tif err != nil {\n" +
                                                     "\t\tlog.Fatal(err)\n" +
                                                     "\t}\n" +

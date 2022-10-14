@@ -1,0 +1,10 @@
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/lazybark/go-helpers v1.3.0 h1:x6kS0km/6IxkW3Xa7hh0/Hisvfpt31r3uT2r2+a492g=
+github.com/lazybark/go-helpers v1.3.0/go.mod h1:bMwDjPrCvWWa4ZfyFA2EdoG4p7b3HElnG7wZ68N9Aq4=
+github.com/lazybark/lazyevent v0.0.0-20220825134211-68a16d325291 h1:Em3VJFGcAuLBCHQ1Rtb4aYtejSlKlR+40Fz3sYU7JTU=
+github.com/lazybark/lazyevent v0.0.0-20220825134211-68a16d325291/go.mod h1:Mi1aESBgT+GmHltjicLKUp7kQBOtALZ/KEBYF0npER8=
+github.com/lazybark/lazyevent v0.0.0-20220829090145-6ca034790faa h1:LIt7+h0MBDkfZeOhqOdym00KVUOMO6SCrEQj4/oJYTU=
+github.com/lazybark/lazyevent v0.0.0-20220829090145-6ca034790faa/go.mod h1:Mi1aESBgT+GmHltjicLKUp7kQBOtALZ/KEBYF0npER8=
+github.com/lazybark/lazyevent v0.0.0-20221014192254-4330022a731f h1:/rc3PHyrgapSyq0k49jjyUP9LwqDdxW9L2mXyAGTjvQ=
+github.com/lazybark/lazyevent v0.0.0-20221014192254-4330022a731f/go.mod h1:Mi1aESBgT+GmHltjicLKUp7kQBOtALZ/KEBYF0npER8=
