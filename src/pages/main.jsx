@@ -35,7 +35,7 @@ export function MainPage() {
                                                 <div className="col-sm-6 col-md-7">
                                                     <div className="about-info">
                                                         <p><span className="title-s">Name: </span>
-                                                            <span>Serhii Krekhno</span></p>
+                                                            <span>Sergey Krekhno</span></p>
                                                         <p><span className="title-s">Profile: </span> <span>backend developer (Go)</span>
                                                         </p>
                                                         <p><span className="title-s">Email: </span>
@@ -62,6 +62,10 @@ export function MainPage() {
                                                         alt="" className="h3em img-fluid"/>
                                                     <img
                                                         src="/assets/img/postgresql-ar21.svg" alt=""
+                                                        className="h3em img-fluid"/>
+                                                    <img
+                                                        src="/assets/img/cloudflare-svgrepo-com.svg" 
+                                                        alt=""
                                                         className="h3em img-fluid"/>
                                                     <img
                                                         src="/assets/img/sqlite-ar21.svg" alt=""
